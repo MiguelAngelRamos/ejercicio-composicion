@@ -48,3 +48,8 @@ python -m venv tienda
    ```sh
    pip install prettytable
    ```
+#### Comprueba que se ha instalado la dependencia
+
+   ```sh
+   pip freeze
+   ```
