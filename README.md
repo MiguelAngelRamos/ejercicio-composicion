@@ -32,3 +32,19 @@ Desarrollar un sistema de gestión de ventas en Python que modele las interaccio
 #### Aspectos Clave a Demostrar:
 - **Composición:** Este proyecto debe evidenciar el uso efectivo de la composición para establecer relaciones significativas entre diferentes objetos (productos, clientes, empleados) dentro de una instancia de `Venta`.
 - **Interacción con el Usuario:** Desarrolla una interfaz de usuario en consola clara y amigable que facilite la navegación por las diferentes opciones del sistema.
+
+
+#### Crear el entorno Virtual
+
+```sh
+python -m venv tienda
+```
+#### Activar entorno virtual 
+
+```sh
+ tienda\Scripts\activate
+```
+#### Instalaciones necesarias
+   ```sh
+   pip install prettytable
+   ```
