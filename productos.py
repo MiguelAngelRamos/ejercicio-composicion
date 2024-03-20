@@ -27,5 +27,3 @@ def imprimir_productos():
     for producto in productos:
         tabla.add_row([producto.id, producto.nombre, producto.precio, producto.categoria, producto.stock])
     print(tabla)
-
-imprimir_productos()
