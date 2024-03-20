@@ -7,7 +7,7 @@ class Cliente:
         self.email = email
         self.saldo = saldo
 
-clientes = [
+list_clientes = [
     Cliente("C001", "Laura Martínez", "laura.martinez@correo.com", 1500),
     Cliente("C002", "Sofia Navarro", "sofia.navarro@correo.com", 2000),
     Cliente("C003", "Carlos López", "carlos.lopez@correo.com", 1800),
@@ -18,6 +18,6 @@ clientes = [
 def imprimir_clientes():
     tabla = PrettyTable()
     tabla.field_names = ["ID", "Nombre", "Email", "Saldo"]
-    for cliente in clientes:
+    for cliente in list_clientes:
         tabla.add_row([cliente.id, cliente.nombre, cliente.email, cliente.saldo])
     print(tabla)
