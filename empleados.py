@@ -21,6 +21,4 @@ def imprimir_empleados():
     for empleado in empleados:
         tabla.add_row([empleado.id, empleado.nombre, empleado.puesto, empleado.salario])
     print(tabla)
-
-imprimir_empleados()
 ## shift + alt + fecha hacia abajo

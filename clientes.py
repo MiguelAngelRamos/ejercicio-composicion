@@ -21,6 +21,3 @@ def imprimir_clientes():
     for cliente in clientes:
         tabla.add_row([cliente.id, cliente.nombre, cliente.email, cliente.saldo])
     print(tabla)
-
-
-imprimir_clientes()
