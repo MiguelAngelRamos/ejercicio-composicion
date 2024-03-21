@@ -6,7 +6,7 @@ from empleados import list_empleados
 from tienda_utils import encontrar_por_id as encontrar_producto_por_id
 from tienda_utils import encontrar_por_id as encontrar_cliente_por_id
 from tienda_utils import encontrar_por_id as encontrar_empleado_por_id
-
+from tienda_utils import input_con_opcion_de_salida
 class Venta:
     def __init__(self, id_venta, producto, cliente, empleado, fecha, cantidad):
         self.id_venta = id_venta
@@ -64,4 +64,26 @@ def imprimir_ventas():
         print(tabla)
 
 
-            
+def ejecutar_venta():
+    id_venta = input_con_opcion_de_salida("ID de Venta: ")
+    if id_venta is None: return
+
+    id_producto = input_con_opcion_de_salida("ID de producto: ")
+    if id_producto is None: return
+
+    id_cliente = input_con_opcion_de_salida("ID de cliente: ")
+    if id_cliente is None: return
+
+    id_empleado = input_con_opcion_de_salida("ID de empleado: ")
+    if id_empleado is None: return
+
+    cantidad = input_con_opcion_de_salida("ID de Cantidad: ")
+    if cantidad is None: return
+
+    try:
+        cantidad = int(cantidad)
+        realizar_venta(id_venta, id_producto, id_cliente, id_empleado, cantidad)
+    except ValueError:
+        print("Cantidad debe ser un numero entero")
+    except Exception as Error:
+        print(f"Error al realizar la venta {Error}")

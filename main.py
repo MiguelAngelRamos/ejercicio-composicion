@@ -1,7 +1,7 @@
 from productos import ProductoElectronico, imprimir_productos
 from empleados import Empleado, imprimir_empleados
 from clientes import Cliente, imprimir_clientes, agregar_cliente
-
+from venta import ejecutar_venta
 def main():
     while True:
         print("""
@@ -26,7 +26,7 @@ Menú Principal:
         elif opcion == '3':
             pass
         elif opcion == '4':
-            pass
+            ejecutar_venta()
         elif opcion == '5':
             imprimir_productos()
         elif opcion == '6':
