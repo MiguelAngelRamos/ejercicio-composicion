@@ -1,5 +1,5 @@
 from prettytable import PrettyTable
-from tienda_utils import input_con_opcion_de_salida
+from utils import input_con_opcion_de_salida
 class Cliente:
     def __init__(self, id, nombre, email, saldo):
         self.id = id

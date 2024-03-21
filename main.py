@@ -1,7 +1,7 @@
-from productos import ProductoElectronico, imprimir_productos
-from empleados import Empleado, imprimir_empleados
-from clientes import Cliente, imprimir_clientes, agregar_cliente
-from venta import ejecutar_venta
+from tienda_utils import resumen_clientes, resumen_empleados, resumen_productos
+from clientes import agregar_cliente
+from venta import ejecutar_venta, imprimir_ventas
+
 def main():
     while True:
         print("""
@@ -28,13 +28,13 @@ Menú Principal:
         elif opcion == '4':
             ejecutar_venta()
         elif opcion == '5':
-            imprimir_productos()
+            resumen_productos()
         elif opcion == '6':
-            imprimir_clientes()
+            resumen_clientes()
         elif opcion == '7':
-            imprimir_empleados()
+            resumen_empleados()
         elif opcion == '8':
-            pass
+            imprimir_ventas()
         elif opcion == '9':
             print("Saliendo del sistema....")
             break

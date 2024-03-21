@@ -6,7 +6,8 @@ from empleados import list_empleados
 from tienda_utils import encontrar_por_id as encontrar_producto_por_id
 from tienda_utils import encontrar_por_id as encontrar_cliente_por_id
 from tienda_utils import encontrar_por_id as encontrar_empleado_por_id
-from tienda_utils import input_con_opcion_de_salida, resumen_productos, resumen_clientes, resumen_empleados
+from tienda_utils import resumen_productos, resumen_clientes, resumen_empleados
+from utils import input_con_opcion_de_salida
 class Venta:
     def __init__(self, id_venta, producto, cliente, empleado, fecha, cantidad):
         self.id_venta = id_venta
@@ -50,11 +51,11 @@ def imprimir_ventas():
     tabla.field_names = ["ID Venta", "Producto", "Cliente", "Empleado", "Fecha", "Cantidad"]
     for venta in list_ventas:
         tabla.add_row([
-            venta.id, 
+            venta.id_venta, 
             venta.producto.nombre, 
             venta.cliente.nombre, 
             venta.empleado.nombre, 
-            venta.fecha.strtime("%Y-%m-%d %H:%M"),
+            venta.fecha.strftime("%Y-%m-%d %H:%M"),
             venta.cantidad
             ])
         
