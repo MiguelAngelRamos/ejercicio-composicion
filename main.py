@@ -1,36 +1,6 @@
 from productos import ProductoElectronico, imprimir_productos
 from empleados import Empleado, imprimir_empleados
-from clientes import Cliente, list_clientes, imprimir_clientes
-
-
-def input_con_opcion_de_salida(prompt):
-    respuesta = input(prompt)
-    # Salir salir SAliR
-    if respuesta.lower() == "salir":
-        print("Operación cancelada.")
-        return None
-    return respuesta
-
-# Agregar un cliente
-def agregar_cliente():
-    imprimir_clientes()
-    print("\nAgregar nuevo cliente (escribe 'salir' para cancelar):")
-    id = input_con_opcion_de_salida("ID: ")
-    if id is None: return
-    nombre = input_con_opcion_de_salida("Nombre: ")
-    if nombre is None: return
-    email = input_con_opcion_de_salida("Email: ")
-    if email is None: return
-    saldo = input_con_opcion_de_salida("Saldo: ")
-    if saldo is None: return
-
-    try:
-        nuevo_cliente = Cliente(id, nombre, email, float(saldo))
-        list_clientes.append(nuevo_cliente)
-        print("Cliente agregado exitosamente.\n")
-    except ValueError as error:
-        print(f"Error al agregar el cliente: {error}")
-
+from clientes import Cliente, imprimir_clientes, agregar_cliente
 
 def main():
     while True:

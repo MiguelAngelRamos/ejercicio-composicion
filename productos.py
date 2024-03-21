@@ -8,7 +8,7 @@ class ProductoElectronico:
         self.categoria = categoria
         self.stock = stock
 
-productos = [
+list_productos = [
     ProductoElectronico("P001", "Laptop Gamer", 1200, "Computadoras", 10),
     ProductoElectronico("P002", "Smartphone XYZ", 700, "Teléfonos", 15),
     ProductoElectronico("P003", "Auriculares Bluetooth", 150, "Accesorios", 20),
@@ -24,6 +24,6 @@ productos = [
 def imprimir_productos():
     tabla = PrettyTable()
     tabla.field_names = ["ID", "Nombre", "Precio", "Categoria", "Stock"]
-    for producto in productos:
+    for producto in list_productos:
         tabla.add_row([producto.id, producto.nombre, producto.precio, producto.categoria, producto.stock])
     print(tabla)

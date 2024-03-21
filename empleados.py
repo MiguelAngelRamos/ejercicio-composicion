@@ -7,7 +7,7 @@ class Empleado:
         self.puesto = puesto
         self.salario = salario
 
-empleados = [
+list_empleados = [
     Empleado("E001", "Empleado Uno", "Gerente", 5000),
     Empleado("E002", "Empleado Dos", "Vendedor", 3000),
     Empleado("E003", "Empleado Tres", "Vendedor", 3000),
@@ -18,7 +18,7 @@ empleados = [
 def imprimir_empleados():
     tabla = PrettyTable()
     tabla.field_names = ["ID", "Nombre", "Puesto", "Salario"]
-    for empleado in empleados:
+    for empleado in list_empleados:
         tabla.add_row([empleado.id, empleado.nombre, empleado.puesto, empleado.salario])
     print(tabla)
 ## shift + alt + fecha hacia abajo
