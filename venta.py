@@ -6,7 +6,7 @@ from empleados import list_empleados
 from tienda_utils import encontrar_por_id as encontrar_producto_por_id
 from tienda_utils import encontrar_por_id as encontrar_cliente_por_id
 from tienda_utils import encontrar_por_id as encontrar_empleado_por_id
-from tienda_utils import input_con_opcion_de_salida
+from tienda_utils import input_con_opcion_de_salida, resumen_productos, resumen_clientes, resumen_empleados
 class Venta:
     def __init__(self, id_venta, producto, cliente, empleado, fecha, cantidad):
         self.id_venta = id_venta
@@ -65,6 +65,13 @@ def imprimir_ventas():
 
 
 def ejecutar_venta():
+    print("\n Preparándose para realizar la venta...")
+    # imprimir los productos, clientes y empleados "disponibles"
+    resumen_productos()
+    resumen_clientes()
+    resumen_empleados()
+    
+
     id_venta = input_con_opcion_de_salida("ID de Venta: ")
     if id_venta is None: return
 
