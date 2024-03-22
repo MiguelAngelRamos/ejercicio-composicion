@@ -9,6 +9,7 @@ def encontrar_por_id(lista, id):
             return element
     return None
 
+
 def resumen_productos():
     if list_productos:
         print("Resumen de productos existentes")
@@ -16,17 +17,18 @@ def resumen_productos():
     else:
         print("No hay productos registrados")
 
+
 def resumen_clientes():
     if list_clientes:
         print("Resumen de clientes existentes")
         imprimir_clientes()
     else:
         print("No hay clientes registrados")
-        
+
+
 def resumen_empleados():
     if list_empleados:
         print("Resumen de empleados existentes")
         imprimir_empleados()
     else:
         print("No hay empleados registrados")
-

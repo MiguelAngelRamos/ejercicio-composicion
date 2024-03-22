@@ -1,4 +1,6 @@
 from prettytable import PrettyTable
+from utils import input_con_opcion_de_salida
+
 
 class ProductoElectronico:
     def __init__(self, id, nombre, precio, categoria, stock):
@@ -7,6 +9,7 @@ class ProductoElectronico:
         self.precio = precio
         self.categoria = categoria
         self.stock = stock
+
 
 list_productos = [
     ProductoElectronico("P001", "Laptop Gamer", 1200, "Computadoras", 10),
@@ -21,9 +24,37 @@ list_productos = [
     ProductoElectronico("P010", "Smartwatch", 250, "Wearables", 12)
 ]
 
+
 def imprimir_productos():
     tabla = PrettyTable()
     tabla.field_names = ["ID", "Nombre", "Precio", "Categoria", "Stock"]
     for producto in list_productos:
         tabla.add_row([producto.id, producto.nombre, producto.precio, producto.categoria, producto.stock])
     print(tabla)
+
+
+def agregar_producto():
+    imprimir_productos()
+    print("\n Agregar nuevo producto (escribe 'salir' para cancelar):")
+
+    id_producto = input_con_opcion_de_salida("ID: ")
+    if id_producto is None: return
+
+    nombre = input_con_opcion_de_salida("Nombre: ")
+    if nombre is None: return
+
+    precio = input_con_opcion_de_salida("Precio: ")
+    if precio is None: return
+
+    categoria = input_con_opcion_de_salida("Categoria: ")
+    if categoria is None: return
+
+    stock = input_con_opcion_de_salida("Stock: ")
+    if stock is None: return
+
+    try:
+        nuevo_producto = ProductoElectronico(id_producto, nombre, precio, categoria, stock)
+        list_productos.append(nuevo_producto)
+        print("Producto agregado exitosamente. \n")
+    except ValueError as error:
+        print(f"Error al agregar el producto:{error}")
